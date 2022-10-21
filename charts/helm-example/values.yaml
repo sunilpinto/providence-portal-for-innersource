@@ -6,7 +6,8 @@ replicaCount: 1
 
 image:
   pullPolicy: IfNotPresent
-  repository: https://github.com/sunilpinto/providence-portal-for-innersource
+  registry: docker.io
+  repository: swasthllc/innersource-portal-repo
   version: main
 
 imagePullSecrets: []
