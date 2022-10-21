@@ -16,7 +16,7 @@ RUN npm install
 # Listen on TCP 8080, by default, but can be overridden by a `docker build` 
 # argument at build time
 # e.g.: `docker build --build-arg PORT=3000 -t my-image:latest . 
-ARG PORT=8080
+ARG PORT=9080
 EXPOSE ${PORT}
 
 # Start server
