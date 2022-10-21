@@ -7,11 +7,11 @@ replicaCount: 1
 image:
   pullPolicy: IfNotPresent
   repository: https://github.com/sunilpinto/providence-portal-for-innersource
-  version: main-dd33394
+  version: main-905b178
 
 imagePullSecrets: []
-nameOverride: main-dd33394
-fullnameOverride: main-dd33394
+nameOverride: main-905b178
+fullnameOverride: main-905b178
 
 serviceAccount:
   # Specifies whether a service account should be created
