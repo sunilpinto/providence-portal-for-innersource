@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   pullPolicy: IfNotPresent
   repository: https://github.com/sunilpinto/providence-portal-for-innersource
-  version: main-566c88a
+  version: main-c7b0737
 
 imagePullSecrets: []
 nameOverride: ""
