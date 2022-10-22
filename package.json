@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "postinstall": "node postinstall",
-    "start": "http-server . -p8080 -c-1 -o index.html"
+    "start": "http-server . -p9080 -c-1 -o index.html"
   },
   "devDependencies": {
     "fs-extra": "^9.1.0",
