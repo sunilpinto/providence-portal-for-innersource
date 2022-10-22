@@ -21,11 +21,3 @@ spec:
           env:
             - name: "PORT"
               value: "90"
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
