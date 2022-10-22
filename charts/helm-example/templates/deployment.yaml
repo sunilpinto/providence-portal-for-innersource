@@ -6,7 +6,7 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      innersource-portal-app
+      app: innersource-portal-app
       version: 2.0.0
   template:
     metadata:
