@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: latest
+          tags: ${{ steps.meta.outputs.tags }}-latest
           labels: ${{ steps.meta.outputs.labels }}
           
           
@@ -48,7 +48,7 @@ jobs:
         run: |
           git_hash=$(git rev-parse --short "$GITHUB_SHA")
           version=$(cat ./charts/helm-example/values.yaml | grep version: | awk '{print $2}')
-          sed -i "s/$version/${GITHUB_REF##*/}/" ./charts/helm-example/values.yaml
+          sed -i "s/$version/${GITHUB_REF##*/}-latest/" ./charts/helm-example/values.yaml
           
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@v0.3
