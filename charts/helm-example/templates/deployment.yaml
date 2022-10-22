@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: innersource-portal-app
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
       app: innersource-portal-app
@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: innersource-portal-app
-          image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "swasthllc/innersource-portal-repo:main-latest"
+          imagePullPolicy: Always
           env:
             - name: "PORT"
               value: "90"

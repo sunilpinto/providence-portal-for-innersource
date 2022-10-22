@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: innersource-portal-app-service
   labels:
-    innersource-portal-app-service
+    app: innersource-portal-app-service
 spec:
-  type: {{ .Values.service.type }}
+  type: LoadBalancer
   ports:
     - name: http
       protocol: TCP

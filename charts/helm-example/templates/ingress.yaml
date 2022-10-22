@@ -1,13 +1,15 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: innersource-portal-app-ingress 
 spec:
   rules:
-  - host: kubernetes.docker.internal
-    http:
+  -  http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: innersource-portal-app-service 
-          servicePort: http
+          service:
+            name: innersource-portal-app-service 
+            port: 
+              number: 90
