@@ -8,11 +8,11 @@ image:
   pullPolicy: Always
   registry: docker.io
   repository: swasthllc/innersource-portal-repo
-  version: main
+  version: main-latest
 
 imagePullSecrets: []
-nameOverride: main
-fullnameOverride: main
+nameOverride: main-latest
+fullnameOverride: main-latest
 
 serviceAccount:
   # Specifies whether a service account should be created
